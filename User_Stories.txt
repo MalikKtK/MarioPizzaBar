@@ -20,6 +20,7 @@ As the pizza-maker, I want to be able to see a list of the orders and when they 
 [list will be over 30 different pizza's]
 
 As the guy who controls orders, I want to be able to see the menu on the screen, so i can see it when there's a customer at the desk/phone.
+ACCEPT CRITERIA:
 
 As the pizza-maker, I should be able to see a time-sorted list of orders, so i know what pizza to make next.
 [P.o not sure about what kind of sorting, but just want it to be easy]
