@@ -1,3 +1,5 @@
+
+
 “Jeg kunne godt tænke mig hele tiden at kunne se en liste med bestillingerne,
 og hvornår de skal afhentes.
 Jeg har over 30 forskellige pizzaer, og de fleste kunder ringer og bestiller en times tid i forvejen.
@@ -9,3 +11,17 @@ Han tager sig af at betjene computeren. Jeg skal bare kunne se listen over besti
 hvilken pizza, der nu skal laves. Måske kunne man sortere dem efter tidspunkt. Det kan jeg ikke helt gennemskue.
 Bare det bliver let for mig.
 Når jeg har lavet en pizza, skal jeg kunne råbe til min nevø, når pizzaen er klar. Så kan han fjerne den fra listen, når den er afhentet og betalt.”
+
+
+
+User-Story template:  <As a role>, I can <activity>, so that <goal>
+
+As the pizza-maker, I want to be able to see a list of the orders and when they should be collected, so I can work efficiently.
+[list will be over 30 different pizza's]
+
+As the guy who controls orders, I want to be able to see the menu on the screen, so i can see it when there's a customer at the desk/phone.
+
+As the pizza-maker, I should be able to see a time-sorted list of orders, so i know what pizza to make next.
+[P.o not sure about what kind of sorting, but just want it to be easy]
+
+As the guy who controls orders, I want to be able to remove a pizza from the order list when it's paid and collected.
