@@ -3,11 +3,13 @@ public class pizzaBar {
     private userInterface ui;
 
     public void run() {
+        menu = new Menu();
+        ui = new userInterface();
         menu.CreatePizza();
         showMenu();
     }
 
     public void showMenu() {
-        ui.printMenu(menu.getPizzaMenu());
+        ui.printString(menu.getPizzaMenu());
     }
 }
