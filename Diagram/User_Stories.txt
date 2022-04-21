@@ -18,15 +18,17 @@ User-Story template:  <As a role>, I can <activity>, so that <goal>
 
 As the pizza-maker, I want to be able to see a list of the orders and when they should be collected, so I can work efficiently.
 [list will be over 30 different pizza's]
+ACCEPT CRITERIA: Have a UI that print's a list of the orders and at what point they should be collected.
 
 As the guy who controls orders, I want to be able to see the menu on the screen, so i can see it when there's a customer at the desk/phone.
-ACCEPT CRITERIA:
+ACCEPT CRITERIA: A UI that prints the menu on the screen so the cashier can take orders.
 
 As the pizza-maker, I should be able to see a time-sorted list of orders, so i know what pizza to make next.
 [P.o not sure about what kind of sorting, but just want it to be easy]
+ACCEPTANCE CRITERIA: Pizza-maker should see a collection-time based last of orders.
 
 As the guy who controls orders, I want to be able to remove a pizza from the order list when it's paid and collected.
-
+ACCEPTANCE CRITERIA: Order remove a pizza from the order list after it's paid and collected.
 
 
 https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=MarioPizzaBarDom%C3%A6nemodel#R7VrbbuM2EP0aP7awREl2HmN7kxZIuka93W72pWAkWmKXIgWKii9f36FFWRfau07jS7AwICDicEiR5xzOTAj30Dhd3kucJY8iIqzn9qNlD016ruvAA3%2B0ZVVaAuSVhljSyDjVhhldE2PsG2tBI5K3HJUQTNGsbQwF5yRULRuWUizabnPB2l%2FNcEwswyzEzLb%2BTSOVGKsT3NQdvxEaJ%2BbTQ3dQdqS4cjY7yRMciUXDhD700FgKocq3dDkmTINX4VKOu9vTu12YJFwdMuDfT%2FO7rwVarz5%2FRR6J5P2nf5JfzCwvmBVmw%2FeyyDICtqDnBgxmHj1LeIv120SkvTHq3QacpCXTXY9HLKmY0vUaj7A0%2B1arCkwpCh4RvZ4%2B%2BC4Sqsgsw6HuXYB8wJaolEHLgdd8QVOGObmjjI0FExLsXHBwHs0bpojMcbFZhdkKkYos92LkbJEHyRKREiVX4GIGoMCQZdSKTHPRoL7iM2mwXg3DRm3xduaaEHgxnLyCH9fi5ydD2Lk4xMiCeIOuBW2FlkZHcDUzPRrnMKEsesArUejF5gqH36rWKBGSrsEfb1FXWCoT6NxgL9b1uJmez3xJkhxGTiu4nY7pES9bjg84V9UaBWM4y%2BnzZtV6YIplTPlIKAXHunT6jiKOwL3vt7nfBvkm994O7p2%2BdyLyPYv8TJP%2FB37hlgBg42rDnxTfyEHnBTMac7AwMtdNDR6F1HJrzEroA5nD%2BaQ8ftj4TLza8qcBQJsEjJ2zTfpIaBQRrikWCiv8vFVhJihXG4D8ETyA47j%2Fq9%2FzYe1jaDt1Gx7tLtVYcNgOphv%2BCIhlQXJ1BB3sP2i2OCoxBIdpofI7uhT8PVIo0pTYgfYqhlOKwXcvLIZgtximkuZXKZxVCoPhhaXg2DXYXzmRt6Giwk4S1yrhrVWCM%2BxUCTeHVgnOqUpEx64RhYyuWeHooaA8a%2B%2B3RnDsejFPxOKjFsM1MZxZDRcvEhy7ZAxFmjGiyMdreDi%2FIA4tFZB7KkHYZWMzPHQvy4BINi5ySKxaK91esqRqKkUscWoJ6VXXPCe7y%2Blmaq9%2FYKYenCxRDywCLOwIj271xTC0QobznIZtuNrYaha%2BmB79%2FqTtcAbK1mTZcJusqgaHvXypHXXzqdlXD9u0qnHlUklk3Uh3CIHtiEKG5DtAmG1DERmT%2F1F7Nwj0d%2FBX2SRhWNGX9nJ3kWq%2BMNXxpdZP4LX1g1BHF%2BU2zajm1XZ3optOyTjsTFTiYE0EOsCrhpuJf%2FsX7La%2F4wStK3d4KWesBbzF9A1XwHbxqf%2F%2F%2BJ0rCOj6zL%2FP4NC96PW9HcHhvHfpdvF2pODQ%2FzmDw750e57o4A32ZJfXRge%2Fc2qRf5ro4PqXiA4ny3i1kJ8a%2Be9Hom5Julb46UVd1V4%2FVLV70ZznoY4Yu7XQoar2OsUXcs%2Bjan9wDlUP35WqnYupGl1FfY5C7o2ihmb9O47Svf41DPrwHw%3D%3D
