@@ -1,6 +1,6 @@
 public class pizzaBar {
-    private Menu menu;
-    private userInterface ui;
+    private Menu menu = new Menu();
+    private userInterface ui = new userInterface();
 
     public void run() {
         menu.CreatePizza();
