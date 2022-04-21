@@ -4,7 +4,7 @@ public class Pizza {
     private final double pizzaPrice;
     private final int pizzaNumber;
 
-    Pizza(String pizzaName, String toppings, double pizzaPrice, int pizzaNumber){
+    Pizza(String pizzaName, String toppings, double pizzaPrice, int pizzaNumber) {
         this.pizzaName = pizzaName;
         this.toppings = toppings;
         this.pizzaPrice = pizzaPrice;
