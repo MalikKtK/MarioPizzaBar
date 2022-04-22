@@ -57,7 +57,7 @@ so i know what pizza to make next.
 [P.o not sure about what kind of sorting, but just want it to be easy]
 
 Accept Criteria:
-- Pizza-maker should see a collection-time based last of orders.
+- Pizza-maker should see a collection-time based list of orders.
 ```
 ```
 As the cashier, 
