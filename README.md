@@ -35,26 +35,35 @@
 
 ##  [User Stories](Diagram/User_Stories.txt)
 ```
-As the pizza-maker, I want to be able to see a list of the orders and when they should be collected, so I can work efficiently.
+As the pizza-maker,
+I want to be able to see a list of the orders and when they should be collected, 
+so I can work efficiently.
 
 Accept Criteria:
 - Have a UI that print's a list of the orders and at what point they should be collected.
 ```
 ```
-As the cashier, I want to be able to see the menu on the screen, so i can see it when there's a customer at the desk/phone.
+As the cashier,
+I want to be able to see the menu on the screen,
+so i can see it when there's a customer at the desk/phone.
 
 Accept Cirteria:
 - A UI that prints the menu on the screen so the cashier can take orders.
 ```
 ```
-As the pizza-maker, I should be able to see a time-sorted list of orders, so i know what pizza to make next.
+As the pizza-maker,
+I should be able to see a time-sorted list of orders,
+so i know what pizza to make next.
 [P.o not sure about what kind of sorting, but just want it to be easy]
 
 Accept Criteria:
 - Pizza-maker should see a collection-time based last of orders.
 ```
 ```
-As the cashier, I want to be able to remove a pizza from the order list when it's paid and collected.
+As the cashier, 
+I want to be able to remove a pizza from the order list when it's paid and collected,
+so the order list is clean and readable. 
+
 
 Accept criteria: 
 - Order remove a pizza from the order list after it's paid and collected.
