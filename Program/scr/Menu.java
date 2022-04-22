@@ -2,6 +2,16 @@ import java.util.ArrayList;
 
 public class Menu {
     private final ArrayList<Pizza> pizzaMenu = new ArrayList<>();
+    private final String options;
+    private final String optionsText;
+    private final ArrayList<String> userChoice;
+
+    Menu(String options, String optionsText, ArrayList<String> userChoice) {
+        this.options = options;
+        this.optionsText = optionsText;
+        this.userChoice = userChoice;
+        CreatePizza();
+    }
 
     public void CreatePizza() {
         Pizza p1 = new Pizza("Vesuvio", "tomatsauce, ost, skinke og oregano", 57, 1);
@@ -36,6 +46,14 @@ public class Menu {
         pizzaMenu.add(p15);
     }
 
+    public String getOptions() {
+        return options;
+    }
+
+    public String getOptionsText() {
+        return optionsText;
+    }
+
     public String getPizzaMenu() {
         StringBuilder text = new StringBuilder();
         for (Pizza pizza : pizzaMenu) {
@@ -46,7 +64,18 @@ public class Menu {
         return text.toString();
     }
 
+    public String getUserChoice() {
+        StringBuilder text = new StringBuilder();
+        for (String userChoice : userChoice) {
+            text.append("\n").append(userChoice);
+        }
+        text.append("\n");
+
+        return text.toString();
+    }
+
     public ArrayList<Pizza> getMenu() {
         return pizzaMenu;
     }
+
 }
