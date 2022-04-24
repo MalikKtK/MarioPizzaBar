@@ -4,7 +4,6 @@ public class pizzaBar {
     private Menu menu;
     private userInterface ui;
     private ArrayList<Order> orders;
-
     public void run() {
         ArrayList<String> options = new ArrayList<>();
         options.add("1" + ". Show Menu:");
@@ -42,6 +41,23 @@ public class pizzaBar {
 
     public void finishOrder() {
         int id = getValidId();
+        System.out.println("Betaler du med kort eller kontant? (Kort/Kontant)");
+        String payment = ui.getString();
+        switch (payment) {
+            case "kort" -> {
+                System.out.println("Type your pin code");
+                ui.getInt();
+                System.out.println("You have been payed" + order.totalPricePizza() + " Kr.");
+                System.out.println("Have a good day!");
+            }
+            case "kontant" -> {
+                System.out.println("You have to recive" + order.totalPricePizza() + "Kr. ");
+                ui.getInt();
+                System.out.println("You have been payed" + order.totalPricePizza() + " Kr.");
+                System.out.println("Have a good day!");
+            }
+            default -> System.out.println("They dont have enough money");
+        }
         deleteOrder(id);
         System.out.println("Finished order #" + id);
         }
