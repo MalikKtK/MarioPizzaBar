@@ -76,7 +76,7 @@ public class pizzaBar {
             System.out.println(order.totalPricePizza() + " KR.");
             System.out.println();
             System.out.println("Skal der være et afhentnings-tidspunkt?: (ja/nej)");
-            option = in.nextLine();
+            option = in.nextLine(); // TODO Get help fixing this scanner-bug thing
             switch (option) {
                 case "ja" -> {
                     int time;
