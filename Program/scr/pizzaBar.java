@@ -4,6 +4,7 @@ public class pizzaBar {
     private Menu menu;
     private userInterface ui;
     private ArrayList<Order> orders;
+
     public void run() {
         ArrayList<String> options = new ArrayList<>();
         options.add("1" + ". Show Menu:");
@@ -38,12 +39,6 @@ public class pizzaBar {
     public void showMenu() {
         menu.printPizzaMenu();
     }
-
-    public void finishOrder() {
-        int id = getValidId();
-        deleteOrder(id);
-        System.out.println("Finished order #" + id);
-        }
 
     public void createOrder() {
         ArrayList<Pizza> pizzas = new ArrayList<>();
@@ -82,7 +77,7 @@ public class pizzaBar {
                     time = ui.getInt();
                     System.out.println("Skriv minut:");
                     minut = ui.getInt();
-                    order.setPickUpTime(time,minut);
+                    order.setPickUpTime(time, minut);
                 }
                 case "nej" -> System.out.println("Ok, afhentnings-tidspunkt sættes automatisk som hurtigst-muligt");
                 default -> System.out.println("Skriv ja eller nej");
@@ -99,6 +94,30 @@ public class pizzaBar {
             }
         } else {
             System.out.println("There are no orders");
+        }
+    }
+
+    public void finishOrder() {
+        int id = getValidId();
+        deleteOrder(id);
+        System.out.println("Finished order #" + id);
+    }
+
+    public void deleteOrder() {
+        int id = getValidId();
+        orders.remove(findOrder(id));
+    }
+
+    public void deleteOrder(int id) {
+        orders.remove(findOrder(id));
+    }
+
+    public void clearOrders() {
+        System.out.println("Are you sure you want to clear the orders? \"y\" to clear.");
+        System.out.println("Choice: ");
+        String s = ui.getString();
+        if (s.equals("y")) {
+            orders.clear();
         }
     }
 
@@ -122,14 +141,6 @@ public class pizzaBar {
         return ids;
     }
 
-    public void deleteOrder() {
-        int id = getValidId();
-        orders.remove(findOrder(id));
-    }
-
-    public void deleteOrder(int id) {
-        orders.remove(findOrder(id));
-    }
 
     public Order findOrder(int id) {
         for (Order o : orders) {
@@ -138,16 +149,6 @@ public class pizzaBar {
             }
         }
         return null;
-    }
-
-
-    public void clearOrders() {
-        System.out.println("Are you sure you want to clear the orders? \"y\" to clear.");
-        System.out.println("Choice: ");
-        String s = ui.getString();
-        if (s.equals("y")) {
-            orders.clear();
-        }
     }
 
 
