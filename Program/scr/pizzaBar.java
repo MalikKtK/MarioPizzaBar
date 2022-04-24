@@ -12,8 +12,7 @@ public class pizzaBar {
         options.add("3" + ". View orders:");
         options.add("4" + ". Finish order:");
         options.add("5" + ". Delete order:");
-        options.add("6" + ". Clear orders:");
-        options.add("7" + ". Exit program:");
+        options.add("6" + ". Exit program:");
 
         ui = new userInterface();
         menu = new Menu("Options:", "Choose: ", options);
@@ -29,8 +28,7 @@ public class pizzaBar {
                 case 3 -> viewOrders();
                 case 4 -> finishOrder();
                 case 5 -> deleteOrder();
-                case 6 -> clearOrders();
-                case 7 -> System.out.println("Exiting program...");
+                case 6 -> System.out.println("Exiting program...");
                 default -> System.out.println("Invalid choice");
             }
         } while (choice != 9);
@@ -110,15 +108,6 @@ public class pizzaBar {
 
     public void deleteOrder(int id) {
         orders.remove(findOrder(id));
-    }
-
-    public void clearOrders() {
-        System.out.println("Are you sure you want to clear the orders? \"y\" to clear.");
-        System.out.println("Choice: ");
-        String s = ui.getString();
-        if (s.equals("y")) {
-            orders.clear();
-        }
     }
 
     public int getValidId() {
