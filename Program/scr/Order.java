@@ -9,6 +9,8 @@ public class Order {
     private final int ID;
     private static int count;
     private String pickUpStatus;
+    private int afhentningTime = -1;
+    private int afhentningsMinut = -1;
     private final ArrayList<Pizza> orderList;
 
     public Order(ArrayList<Pizza> thisOrder, String status) {
@@ -30,6 +32,11 @@ public class Order {
         DATETIME = date;
     }
 
+    public void setPickUpTime(int time, int minut) {
+        afhentningTime = time;
+        afhentningsMinut = minut;
+    }
+
     public int getID() {
         return ID;
     }
@@ -37,7 +44,6 @@ public class Order {
     public void setPickUpStatus(String pickUpStatus) {
         this.pickUpStatus = pickUpStatus;
     }
-
 
     public String toString() {
         StringBuilder text = new StringBuilder();
@@ -48,6 +54,16 @@ public class Order {
         text.append(orderList.get(orderList.size() - 1).getPizzaName()).append(" ");
         text.append("- ");
         text.append(DATETIME);
+
+        text.append(" ");
+        text.append("Afhentningstids-tidspunkt: ");
+        if (afhentningTime != 0) {
+            text.append(afhentningTime + ":" + afhentningsMinut);
+        }
+        else {
+            text.append("Hurtigst muligt");
+        }
+
         return text.toString();
     }
 

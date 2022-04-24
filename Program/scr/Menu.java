@@ -54,14 +54,21 @@ public class Menu {
         return optionsText;
     }
 
-    public String getPizzaMenu() {
-        StringBuilder text = new StringBuilder();
-        for (Pizza pizza : pizzaMenu) {
-            text.append("\n").append(pizza);
-        }
-        text.append("\n");
 
-        return text.toString();
+    public void printPizzaMenu(){
+        // TODO maybe make menulength an menu attribute for low coupling (i think that's the term))
+        int menuLength = 115;
+        int dotPadding;
+        for (Pizza pizza : pizzaMenu) {
+            dotPadding = (4 + ". " + pizza.getPizzaName() + ": " + pizza.toppings() + " ").length();
+            System.out.printf("%2d. %S: %s ", pizza.getPizzaNumber(),pizza.getPizzaName(), pizza.toppings());
+            for (int i = 0; i <= (menuLength - dotPadding); i++) {
+                System.out.print(".");
+            }
+            System.out.print(" " + pizza.getPizzaPrice() + ",-");
+            System.out.println();
+        }
+        System.out.println();
     }
 
     public String getUserChoice() {

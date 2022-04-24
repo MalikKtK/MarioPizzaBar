@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class pizzaBar {
     private Menu menu;
     private userInterface ui;
     private ArrayList<Order> orders;
+    private Scanner in = new Scanner(System.in);
 
     public void run() {
         ArrayList<String> options = new ArrayList<>();
@@ -37,7 +39,7 @@ public class pizzaBar {
     }
 
     public void showMenu() {
-        System.out.println(menu.getPizzaMenu());
+        menu.printPizzaMenu();
     }
 
     public void finishOrder() {
@@ -68,11 +70,29 @@ public class pizzaBar {
         }
 
         if (pizzas.size() > 0) {
+            String option;
             Order order = new Order(pizzas, temp);
             System.out.println("Total price: ");
             System.out.println(order.totalPricePizza() + " KR.");
+            System.out.println();
+            System.out.println("Skal der være et afhentnings-tidspunkt?: (ja/nej)");
+            option = in.nextLine();
+            switch (option) {
+                case "ja" -> {
+                    int time;
+                    int minut;
+                    System.out.println("Skriv time:");
+                    time = in.nextInt();
+                    System.out.println("Skriv minut:");
+                    minut = in.nextInt();
+                    order.setPickUpTime(time,minut);
+                }
+                case "nej" -> System.out.println("Ok, afhentnings-tidspunkt sættes automatisk som hurtigst-muligt");
+                default -> System.out.println("Skriv ja eller nej");
+            }
             orders.add(order);
         }
+
     }
 
     public void viewOrders() {

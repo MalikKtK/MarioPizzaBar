@@ -14,6 +14,6 @@ public record Pizza(String pizzaName, String toppings, double pizzaPrice, int pi
 
     @Override
     public String toString() {
-        return pizzaNumber + "." + pizzaName + toppings + "..................." + pizzaPrice + ",-";
+        return pizzaNumber + ". " + pizzaName.toUpperCase() + ": " + toppings + "..................." + pizzaPrice + ",-";
     }
 }
