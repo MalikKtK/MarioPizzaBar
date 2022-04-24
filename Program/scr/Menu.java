@@ -56,7 +56,6 @@ public class Menu {
 
 
     public void printPizzaMenu(){
-        // TODO maybe make menulength an menu attribute for low coupling (i think that's the term))
         int menuLength = 115;
         int dotPadding;
         for (Pizza pizza : pizzaMenu) {

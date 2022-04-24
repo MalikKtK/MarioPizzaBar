@@ -57,8 +57,8 @@ public class Order {
 
         text.append(" ");
         text.append("Afhentningstids-tidspunkt: ");
-        if (afhentningTime != 0) {
-            text.append("[" +afhentningTime + ":" + afhentningsMinut + "]");
+        if (afhentningTime != -1) {
+            text.append("[").append(afhentningTime).append(":").append(afhentningsMinut).append("]");
         }
         else {
             text.append("Hurtigst muligt");

@@ -1,11 +1,9 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class pizzaBar {
     private Menu menu;
     private userInterface ui;
     private ArrayList<Order> orders;
-    private Scanner in = new Scanner(System.in);
 
     public void run() {
         ArrayList<String> options = new ArrayList<>();
@@ -59,7 +57,7 @@ public class pizzaBar {
         int choice = -1;
         while (choice != 0) {
             System.out.println("Pizza " + count + ": ");
-            choice = validRange(1, 30);
+            choice = validRange(1, 15);
 
             for (Pizza p : menu.getMenu()) {
                 if (p.getPizzaNumber() == choice && choice != 0) {
@@ -76,15 +74,15 @@ public class pizzaBar {
             System.out.println(order.totalPricePizza() + " KR.");
             System.out.println();
             System.out.println("Skal der være et afhentnings-tidspunkt?: (ja/nej)");
-            option = in.nextLine(); // TODO Get help fixing this scanner-bug thing
+            option = ui.getString();
             switch (option) {
                 case "ja" -> {
                     int time;
                     int minut;
                     System.out.println("Skriv time:");
-                    time = in.nextInt();
+                    time = ui.getInt();
                     System.out.println("Skriv minut:");
-                    minut = in.nextInt();
+                    minut = ui.getInt();
                     order.setPickUpTime(time,minut);
                 }
                 case "nej" -> System.out.println("Ok, afhentnings-tidspunkt sættes automatisk som hurtigst-muligt");
