@@ -55,12 +55,12 @@ public class Order {
 
 
         text.append(" ");
-        text.append("Afhentningstids-tidspunkt: ");
+        text.append("Pickup-time: ");
         if (afhentningTime != -1) {
             text.append("[").append(afhentningTime).append(":").append(afhentningsMinut).append("]");
         }
         else {
-            text.append("Hurtigst muligt");
+            text.append("As fast as possible");
         }
 
         return text.toString();

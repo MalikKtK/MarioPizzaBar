@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class pizzaBar {
     private Menu menu;
@@ -67,20 +65,20 @@ public class pizzaBar {
             System.out.println("Total price: ");
             System.out.println(order.totalPricePizza() + " KR.");
             System.out.println();
-            System.out.println("Skal der være et afhentnings-tidspunkt?: (ja/nej)");
+            System.out.println("Is there a time of collection?: (y/n)");
             option = ui.getString();
             switch (option) {
-                case "ja" -> {
+                case "y" -> {
                     int time;
                     int minut;
-                    System.out.println("Skriv time:");
+                    System.out.println("Enter hour:");
                     time = ui.getInt();
-                    System.out.println("Skriv minut:");
+                    System.out.println("Enter minute:");
                     minut = ui.getInt();
                     order.setPickUpTime(time, minut);
                 }
-                case "nej" -> System.out.println("Ok, afhentnings-tidspunkt sættes automatisk som hurtigst-muligt");
-                default -> System.out.println("Skriv ja eller nej");
+                case "n" -> System.out.println("Alright, time of collection is set as fastest-possible.");
+                default -> System.out.println("Please enter y for yes or n for no.");
             }
             orders.add(order);
         }
@@ -132,7 +130,6 @@ public class pizzaBar {
         return ids;
     }
 
-
     public Order findOrder(int id) {
         for (Order o : orders) {
             if (o.getID() == id) {
@@ -141,7 +138,6 @@ public class pizzaBar {
         }
         return null;
     }
-
 
     public int validRange(int range1, int range2) {
         int choice = validateChoice("Invalid input, enter a new number");

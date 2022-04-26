@@ -64,7 +64,7 @@ public class Menu {
             for (int i = 0; i <= (menuLength - dotPadding); i++) {
                 System.out.print(".");
             }
-            System.out.print(" " + pizza.getPizzaPrice() + ",-");
+            System.out.printf(" %.2f ,-", pizza.getPizzaPrice());
             System.out.println();
         }
         System.out.println();
