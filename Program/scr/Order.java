@@ -37,11 +37,6 @@ public class Order {
         afhentningsMinut = minut;
     }
 
-    public int getPickupTime() {
-        int parsedTime = Integer.parseInt((String.valueOf(afhentningTime) + afhentningsMinut) );
-        return parsedTime;
-    }
-
     public int getID() {
         return ID;
     }
