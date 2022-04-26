@@ -1,9 +1,21 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class pizzaBar {
     private Menu menu;
     private userInterface ui;
     private ArrayList<Order> orders;
+    private ArrayList<Order> collectionTimeOrders;
+    private static Comparator<Order> orderCollectionTime = new Comparator<Order>() {
+        public int compare(Order o1, Order o2) {
+
+            int pickupTime1 = o1.getPickupTime();
+            int pickupTime2 = o2.getPickupTime();
+
+            return pickupTime1 - pickupTime2;
+        }
+    };
 
     public void run() {
         ArrayList<String> options = new ArrayList<>();
@@ -89,6 +101,20 @@ public class pizzaBar {
         if (orders.size() != 0) {
             for (Order o : orders) {
                 System.out.println(o.toString());
+            }
+        } else {
+            System.out.println("There are no orders");
+        }
+    }
+
+    public void viewOrdersCollectiontime() {
+        collectionTimeOrders.clear();
+        collectionTimeOrders = orders;
+        Collections.sort(collectionTimeOrders, Order.);
+        // tempList.sort();
+        if (orders.size() != 0) {
+            for (Order o : orders) {
+               // System.out.println(o.ser);
             }
         } else {
             System.out.println("There are no orders");

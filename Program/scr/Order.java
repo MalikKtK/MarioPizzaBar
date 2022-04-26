@@ -37,6 +37,11 @@ public class Order {
         afhentningsMinut = minut;
     }
 
+    public int getPickupTime() {
+        int parsedTime = Integer.parseInt((String.valueOf(afhentningTime) + afhentningsMinut) );
+        return parsedTime;
+    }
+
     public int getID() {
         return ID;
     }
@@ -47,13 +52,12 @@ public class Order {
 
     public String toString() {
         StringBuilder text = new StringBuilder();
-        text.append("#").append(ID).append(" ").append(pickUpStatus).append(" - ");
+        text.append("#").append(ID).append(" [").append(DATETIME).append("] ").append(pickUpStatus).append(" - ");
         for (int i = 0; i < orderList.size() - 1; i++) {
             text.append(orderList.get(i).getPizzaName()).append(", ");
         }
         text.append(orderList.get(orderList.size() - 1).getPizzaName()).append(" ");
-        text.append("- ");
-        text.append(DATETIME);
+
 
         text.append(" ");
         text.append("Afhentningstids-tidspunkt: ");
